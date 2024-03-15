@@ -1,22 +1,59 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { StatusCodes } from http-status-codes;
+// MODULES IMPORT
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import { Database } from "./config/database.js";
 
-const app = express();
+// ROUTERS
+import { ALLIANCEROUTER } from "./routers/allianceRouter.js";
+import { USERROUTER } from "./routers/userRouter.js";
 
+// CONFIG
 dotenv.config();
 
+// CONSTANTS
+const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI;
+
+// INTIALIZING EXPRESS
+const app = express();
+
+// DATABASE
+const database = new Database(MONGODB_URI);
+database.connect();
+
+// MIDDLEWARES
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.status(StatusCodes.OK).json({
-        message: 'Hello World ✅'
+// Serve static files from the 'images' directory
+app.use("/api/images", express.static("public/images"));
+
+// TEST ROUTE
+app.use("/api/test", (req, res) => {
+  res.send("Server is running ✅");
+});
+
+//ROUTES
+app.use("/api/alliance", ALLIANCEROUTER);
+app.use("/api/user", USERROUTER);
+
+// DATABASE DISCONNECTION
+process.on("SIGINT", () => {
+  database
+    .disconnect()
+    .then(() => {
+      process.exit(0);
+    })
+    .catch((err) => {
+      console.error(err);
+      process.exit(1);
     });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log('Server running on port: ' + process.env.PORT);
+// LISTEN
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT} ✅`);
 });
