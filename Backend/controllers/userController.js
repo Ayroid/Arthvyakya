@@ -139,23 +139,18 @@ const deleteUser = async (req, res) => {
 };
 
 const loginUser = async (req, res) => {
-  const { email, password } = req.body;
-  const query = { email };
+  const { organizationID, password } = req.body;
+  const query = { organizationID };
 
   const user = await READUSERDB([query]);
 
   if (user.length > 0) {
     const validPassword = await compare(password, user[0].password);
     if (validPassword) {
-      let payload = { user_id: user[0]._id, email };
+      const payload = { user_id: user[0]._id, organizationID };
       const { token, refreshToken } = GENERATETOKEN(payload);
-      payload = {
-        user_id: user[0]._id,
-        username: user[0].username,
-        messages: user[0].messages,
-      };
-      console.log(USER_MESSAGES.USER_LOGGED_IN, { user });
-      return res.status(StatusCodes.OK).json({ token, refreshToken, payload });
+      console.log(USER_MESSAGES.USER_LOGGED_IN, { user }); 
+      return res.status(StatusCodes.OK).json({ token, refreshToken });
     } else {
       console.log(USER_MESSAGES.USER_NOT_AUTHORIZED);
       return res
