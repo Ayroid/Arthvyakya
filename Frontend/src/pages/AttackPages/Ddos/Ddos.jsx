@@ -1,7 +1,7 @@
 import Proptypes from "prop-types";
 import styles from "./Ddos.module.css";
 
-import axios from "axios";
+// import axios from "axios";
 
 import DashboardNavigation from "../../../components/DashboardNavigation/DashboardNavigation";
 import AsideMenu from "../../../components/AsideMenu/AsideMenu";

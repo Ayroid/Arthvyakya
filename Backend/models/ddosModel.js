@@ -1,18 +1,26 @@
 import mongoose from "mongoose";
 import moment from "moment-timezone";
 
-const allianceSchema = new mongoose.Schema({
-  allianceName: {
+const ddosAttackSchema = new mongoose.Schema({
+  targetService: {
     type: String,
     required: true,
   },
-  allianceImageURL: {
+  numberOfThreads: {
     type: String,
     required: true,
   },
-  allianceWebsiteURL: {
+  numberOfVMs: {
     type: String,
     required: true,
+  },
+  havocMode: {
+    type: String,
+    required: true,
+  },
+  stopTime: {
+    type: String,
+    required: false,
   },
   createdAt: {
     type: Date,
@@ -26,6 +34,6 @@ const allianceSchema = new mongoose.Schema({
   },
 });
 
-const allianceModel = mongoose.model("alliance", allianceSchema);
+const ddosAttackModel = mongoose.model("ddosAttack", ddosAttackSchema);
 
-export { allianceModel as ALLIANCEMODEL };
+export { ddosAttackModel as DDOSATTACKMODEL };

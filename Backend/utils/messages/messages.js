@@ -181,6 +181,42 @@ const REGISTRATION_MESSAGES = {
   ERROR_DELETING_REGISTRATION: "Error Deleting Registration ❌ ",
 };
 
+const ATTACK_MESSAGES = {
+  ATTACK_ALREADY_EXISTS: "Attack Already Exists ❌ ",
+  ATTACK_CREATED: "Attack Created ✅ ",
+  ATTACK_NOT_CREATED: "Attack Not Created ❌ ",
+  ATTACK_FOUND: "Attack Found ✅ ",
+  ATTACK_NOT_FOUND: "Attack Not Found ❌ ",
+  ATTACK_READ: "Attack Read ✅ ",
+  ATTACK_NOT_READ: "Attack Not Read ❌ ",
+  ATTACK_UPDATED: "Attack Updated ✅ ",
+  ATTACK_NOT_UPDATED: "Attack Not Updated ❌ ",
+  ATTACK_DELETED: "Attack Deleted ✅ ",
+  ATTACK_NOT_DELETED: "Attack Not Deleted ❌ ",
+  ERROR_CREATING_ATTACK: "Error Creating Attack ❌ ",
+  ERROR_READING_ATTACK: "Error Reading Attack ❌ ",
+  ERROR_UPDATING_ATTACK: "Error Updating Attack ❌ ",
+  ERROR_DELETING_ATTACK: "Error Deleting Attack ❌ ",
+};
+
+const DDOS_ATTACK_MESSAGES = {
+  DDOS_ATTACK_ALREADY_EXISTS: "DDOS Attack Already Exists ❌ ",
+  DDOS_ATTACK_CREATED: "DDOS Attack Created ✅ ",
+  DDOS_ATTACK_NOT_CREATED: "DDOS Attack Not Created ❌ ",
+  DDOS_ATTACK_FOUND: "DDOS Attack Found ✅ ",
+  DDOS_ATTACK_NOT_FOUND: "DDOS Attack Not Found ❌ ",
+  DDOS_ATTACK_READ: "DDOS Attack Read ✅ ",
+  DDOS_ATTACK_NOT_READ: "DDOS Attack Not Read ❌ ",
+  DDOS_ATTACK_UPDATED: "DDOS Attack Updated ✅ ",
+  DDOS_ATTACK_NOT_UPDATED: "DDOS Attack Not Updated ❌ ",
+  DDOS_ATTACK_DELETED: "DDOS Attack Deleted ✅ ",
+  DDOS_ATTACK_NOT_DELETED: "DDOS Attack Not Deleted ❌ ",
+  ERROR_CREATING_DDOS_ATTACK: "Error Creating DDOS Attack ❌ ",
+  ERROR_READING_DDOS_ATTACK: "Error Reading DDOS Attack ❌ ",
+  ERROR_UPDATING_DDOS_ATTACK: "Error Updating DDOS Attack ❌ ",
+  ERROR_DELETING_DDOS_ATTACK: "Error Deleting DDOS Attack ❌ ",
+};
+
 export {
   DB_MESSAGES,
   SERVER_MESSAGES,
@@ -193,4 +229,6 @@ export {
   COREMEMBER_MESSAGES,
   HEADS_MESSAGES,
   REGISTRATION_MESSAGES,
+  ATTACK_MESSAGES,
+  DDOS_ATTACK_MESSAGES,
 };

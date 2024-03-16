@@ -5,8 +5,8 @@ import cors from "cors";
 import { Database } from "./config/database.js";
 
 // ROUTERS
-import { ALLIANCEROUTER } from "./routers/allianceRouter.js";
 import { USERROUTER } from "./routers/userRouter.js";
+import { ATTACKROUTER } from "./routers/ddosRouter.js";
 
 // CONFIG
 dotenv.config();
@@ -37,8 +37,8 @@ app.use("/api/test", (req, res) => {
 });
 
 //ROUTES
-app.use("/api/alliance", ALLIANCEROUTER);
 app.use("/api/user", USERROUTER);
+app.use("/api/attacks", ATTACKROUTER);
 
 // DATABASE DISCONNECTION
 process.on("SIGINT", () => {
