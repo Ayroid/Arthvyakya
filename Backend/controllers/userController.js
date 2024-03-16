@@ -142,7 +142,7 @@ const loginUser = async (req, res) => {
   const { email, password } = req.body;
   const query = { email };
 
-  const user = await READUSERDB(query);
+  const user = await READUSERDB([query]);
 
   if (user.length > 0) {
     const validPassword = await compare(password, user[0].password);

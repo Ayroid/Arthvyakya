@@ -1,0 +1,96 @@
+.ddosDiv {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ddosWrapper {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainDdos {
+  margin: 6rem 4rem;
+}
+
+.ddosServices {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.ddosService {
+  width: 25dvw;
+  height: 20dvh;
+  background-color: rgb(208, 208, 209);
+  transition: all 0.25s;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background: rgb(179, 179, 179);
+    transition: all 0.25s;
+  }
+}
+
+.backButton {
+  rotate: 180deg;
+  position: absolute;
+  left: 3rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.addService {
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
+  cursor: pointer;
+  background-color: rgb(208, 208, 209);
+  transition: all 0.25s;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  &:hover {
+    background: rgb(179, 179, 179);
+    transition: all 0.25s;
+  }
+}
+
+.submitButton {
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submitButton:hover {
+  opacity: 0.8;
+}

@@ -1,46 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 500;
+  color: var(--textLight);
+  background-color: var(--bgLight);
+  scroll-behavior: smooth;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --bgDark: #020202;
+  --bgLight: #fcfcfc;
+  --navDark: #010101;
+  --textLight: #ffffff;
+  --textDark: #000000;
+  --textDisabled: #464646;
+  --buttonDark: #000000;
+  --buttonLight: #ffffff;
+  --buttonLink: #2797ff;
+  --buttonDisabled: #a5a5a5;
+  --scrollBar: #aaaaaa;
+  --scrollBarHover: #888888;
+  --separatorHr: #a5a5a5;
+  --blueUnderLine: #33c2ff;
+  --yellowUnderLine: #ffe600;
+  --eventDescBg: #d9d9d9;
+  --switchBg: #eeeeee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+* {
+  scrollbar-color: transparent;
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBar);
+  border-radius: 50px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollBarHover);
+}
+
+a {
+  text-decoration: none;
+  color: var(--textLight);
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: black
+}
+
+.centerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fullScreen {
+  width: 100%;
+  height: 100%;
 }

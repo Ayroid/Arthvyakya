@@ -1,0 +1,38 @@
+.dashboardHomeDiv {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboardHome {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 4rem;
+}
+
+.dashboardBox {
+  width: 25dvw;
+  height: 20dvh;
+  background-color: rgb(208, 208, 209);
+  transition: all 0.25s;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  &:hover {
+    background: rgb(179, 179, 179);
+    transition: all 0.25s;
+  }
+}

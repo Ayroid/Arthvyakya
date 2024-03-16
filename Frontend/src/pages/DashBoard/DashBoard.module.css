@@ -1,0 +1,17 @@
+.dashboardDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: 100%;
+}
+
+.dashboardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}

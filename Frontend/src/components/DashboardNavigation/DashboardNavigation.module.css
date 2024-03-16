@@ -1,0 +1,41 @@
+.dashboardNavigationDiv {
+  height: 10dvh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userGreetings h1 {
+  margin-bottom: 0;
+}
+
+.userGreetings p {
+  margin-top: 0;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navIcons {
+  height: 1.75rem;
+  width: 100%;
+}
+
+.separator {
+  height: 2rem;
+  width: 0.1rem;
+  background-color: var(--separatorHr);
+  margin-inline: 1rem;
+}
