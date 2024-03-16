@@ -149,7 +149,7 @@ const loginUser = async (req, res) => {
     if (validPassword) {
       const payload = { user_id: user[0]._id, organizationID };
       const { token, refreshToken } = GENERATETOKEN(payload);
-      console.log(USER_MESSAGES.USER_LOGGED_IN, { user }); 
+      console.log(USER_MESSAGES.USER_LOGGED_IN, { user });
       return res.status(StatusCodes.OK).json({ token, refreshToken });
     } else {
       console.log(USER_MESSAGES.USER_NOT_AUTHORIZED);
